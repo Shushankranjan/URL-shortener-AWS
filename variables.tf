@@ -13,3 +13,16 @@ variable "project_name" {
   type        = string
   default     = "url-shortener"
 }
+
+variable "test_user_email" {
+  description = "Email for the auto-created Cognito test user"
+  type        = string
+  default     = "testuser@example.com" # change to any email you want
+}
+
+variable "test_user_password" {
+  description = "Temporary password for the test user — Cognito will ask to change it on first login"
+  type        = string
+  default     = "TempPass123!" # must have uppercase, lowercase, number, special char
+  sensitive   = true           # sensitive = true: Terraform never prints this in logs
+}

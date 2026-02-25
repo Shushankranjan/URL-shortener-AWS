@@ -86,7 +86,8 @@ resource "aws_lambda_function" "create_short_url" {
       TABLE_NAME = aws_dynamodb_table.url_shortener.name
       # BASE_URL is a placeholder for now — we'll update this in Milestone 3
       # after API Gateway is created and we have the real invoke URL
-      BASE_URL   = "https://placeholder.execute-api.us-east-1.amazonaws.com"
+      BASE_URL   = aws_apigatewayv2_stage.default.invoke_url
+
     }
   }
 }

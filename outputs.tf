@@ -21,3 +21,23 @@ output "redirect_url_function_name" {
   description = "Used in Milestone 3 to wire API Gateway to this function"
   value       = aws_lambda_function.redirect_url.function_name
 }
+
+output "api_url" {
+  description = "The live HTTPS URL for your URL shortener API"
+  value       = aws_apigatewayv2_stage.default.invoke_url
+}
+
+output "cognito_user_pool_id" {
+  description = "Needed to authenticate — used in the login command"
+  value       = aws_cognito_user_pool.url_shortener.id
+}
+
+output "cognito_client_id" {
+  description = "Needed to authenticate — used in the login command"
+  value       = aws_cognito_user_pool_client.url_shortener.id
+}
+
+output "test_user_email" {
+  description = "The test user's email"
+  value       = var.test_user_email
+}
