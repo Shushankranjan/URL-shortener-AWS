@@ -1,1 +1,0 @@
-{"statusCode": 201, "headers": {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"}, "body": "{\"short_url\": \"https://placeholder.execute-api.us-east-1.amazonaws.com/jPloaH1N\", \"short_code\": \"jPloaH1N\", \"long_url\": \"https://www.google.com\", \"expires_in\": \"90 days\"}"}

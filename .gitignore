@@ -1,0 +1,8 @@
+.terraform/
+.terraform.lock.hcl
+*.zip
+lambda/*.zip
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+response.json
